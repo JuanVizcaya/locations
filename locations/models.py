@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.gis.db.models import PointField
 
-# Create your models here.
+
 class Location(models.Model):
     the_geom = PointField(null=True,srid=4326)
     tipo = models.CharField(max_lenth=50)
