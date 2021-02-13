@@ -1,10 +1,10 @@
 from django.db import models
-from django.contrib.gis.db.models import PointField
+from django.contrib.gis.db.models import GeometryField
 
 
 class Location(models.Model):
-    the_geom = PointField(null=True,srid=4326)
-    tipo = models.CharField(max_lenth=50)
+    geometry = GeometryField(null=True,srid=4326)
+    tipo = models.CharField(max_length=50)
     latitude = models.DecimalField(
         max_digits=14,decimal_places=8, default=0.0)
     longitude = models.DecimalField(

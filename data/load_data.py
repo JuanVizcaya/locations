@@ -17,7 +17,7 @@ def load_data_to_postgis():
     gdf.pop('cartodb_id')
 
 
-    engine = create_engine('postgresql://postgres:postgres@localhost:5432/postgres')
+    engine = create_engine('postgresql://postgres:postgres@postgis_db:5432/postgres')
     gdf.to_postgis('locations_location', engine, if_exists='append', index=False)
     print('====== DATA LOADED ======')
 

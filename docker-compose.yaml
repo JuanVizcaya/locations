@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  postgis_db:
+    image: postgis/postgis
+    container_name: postgis_db
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+  django_locs:
+    build: .
+    container_name: django_locs
+    command: python /app/manage.py runserver 0:5001
+    ports:
+      - 5001:5001
+    volumes:
+      - .:/code
+    depends_on:
+      - postgis_db
+
+
+volumes:
+  .:
+  postgres_data:
