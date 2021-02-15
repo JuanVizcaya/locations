@@ -12,17 +12,28 @@ services:
       POSTGRES_HOST_AUTH_METHOD: 'trust'
 
   django_locs:
-    build: .
+    build: back-app/.
     container_name: django_locs
-    working_dir: /app
+    working_dir: /back-app
     command: ["./wait.sh", "postgis_db", "python", "manage.py", "runserver", "0:5001"]
     ports:
       - 5001:5001
     volumes:
-      - .:/code
+      - back-app:/back-app
     depends_on:
       - postgis_db
 
+  react_app:
+    build: front-app/.
+    container_name: react_app
+    ports:
+      - 3000:3000
+    volumes:
+      - front-app:/front-app
+    depends_on:
+      - django_locs
+
 volumes:
-  .:
+  back-app:
+  front-app:
   postgres_data:

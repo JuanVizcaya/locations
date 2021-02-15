@@ -6,11 +6,11 @@ ENV POSTGRES_PASSWORD postgres
 RUN mkdir /data
 COPY data/. /data/
 
-RUN mkdir /app
-COPY app/. /app/
+RUN mkdir /back-app
+COPY . /back-app/
 
 RUN apt-get update &&\
     apt-get install -y binutils libproj-dev gdal-bin postgresql-client
 
 RUN pip install --upgrade pip \
-    && pip install -r app/requirements.txt
+    && pip install -r back-app/requirements.txt
