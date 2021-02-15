@@ -1,12 +1,12 @@
 # Locations
 
-This is a full project which has react in the *frontend*, *django/django_restframework* in the backend and It uses a *postgres/postgis* database.
+This is a full project which has *react* in the *frontend*, *django/django_restframework* in the backend and It uses a *postgres/postgis* database.
 
 <div id='id0'/>
 
 ## Index
 
-[1.](#id1) __Instalation__
+[1.](#id1) __Installation__
   - [Requirements](#id11)
   - [Quick start](#id12)
 
@@ -28,7 +28,7 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 
 <div id='id1' />
 
-## Instalation
+## Installation
 
 <div id='id11' />
 
@@ -59,7 +59,7 @@ django_locs    | Starting development server at http://0:5001/
 django_locs    | Quit the server with CONTROL-C.
 ```
 
-- Make the needed django migrations:
+- Make needed django migrations:
 
 `docker exec -it django_locs sh -c "python /back-app/manage.py makemigrations"`
 
@@ -84,7 +84,7 @@ django_locs    | Quit the server with CONTROL-C.
 <div id='id21' />
 
 ### Django Administration Panel
-You can access to the administration panel with the __Superuser__ credentials that you have already created.
+You can access to the administration panel with the __Superuser__ credentials you have already created.
 
 `URL: http://localhost:5001/admin`
 
