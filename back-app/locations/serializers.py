@@ -8,5 +8,5 @@ class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = [
-            'id', 'the_geom', 'tipo', 'latitude', 'longitude', 'color'
+            'id', 'geometry', 'tipo', 'latitude', 'longitude', 'color'
             ]

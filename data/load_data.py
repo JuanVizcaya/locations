@@ -2,14 +2,16 @@ from sqlalchemy import create_engine
 from geoalchemy2 import Geometry, WKTElement
 import pandas as pd
 import geopandas as gpd
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def load_data_to_postgis():
     srid = 4326
 
     gdf = gpd.GeoDataFrame(pd.read_csv('puntos_examen_fullstack.csv'))
 
-    gdf['geometry'] = gpd.points_from_xy(gdf.longitude, gdf.latitide, crs='EPSG:4326')
+    gdf['geometry'] = gpd.points_from_xy(gdf.longitude, gdf.latitude, crs='EPSG:4326')
     gdf = gdf.set_crs(epsg=srid)
     gdf.pop('the_geom')
 
