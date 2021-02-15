@@ -13,7 +13,8 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 [2.](#id2) __Backend__
   - [Django Admin Panel](#id21)
   - [Locations Endpoint](#id22)
-  - [Media Type](#id22)
+  - [Media Type](#id23)
+  - [Methods](#id24)
 
 
 [3.-](#id3) __Frontend__
@@ -54,7 +55,7 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 
 `docker exec -it django_locs sh -c "python /back-app/manage.py makemigrations"`
 
-`docker exec -it django_locs sh -c "python /back-app/manage.py makemigrations api"`
+`docker exec -it django_locs sh -c "python /back-app/manage.py makemigrations locations"`
 
 `docker exec -it django_locs sh -c "python /back-app/manage.py migrate"`
 
@@ -76,7 +77,8 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 
 ### Django Administration Panel
 You can access to the administration panel with the __Superuser__ credentials that you have already created.
-`URL: http://localhost:5001/`
+
+`URL: http://localhost:5001/admin`
 
 <div id='id22' />
 
