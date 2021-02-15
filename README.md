@@ -165,7 +165,7 @@ You can make requests to the __Locations API__, even with your browser.
 #### postgis_db
 - Name: `postgis_db`
 
-- Port: `5432`
+- Port: `5434`
 
 <div id='id41' />
 
