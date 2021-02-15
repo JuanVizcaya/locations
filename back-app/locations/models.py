@@ -21,4 +21,4 @@ class Location(models.Model):
 
     def __str__(self):
         """ Model representation in the admin panel """
-        return self.id
+        return f'{self.id}'

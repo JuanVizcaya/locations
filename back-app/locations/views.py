@@ -19,7 +19,7 @@ class LocationsViewset(viewsets.ViewSet):
         serialized = LocationSerializer(locations, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
-    def create(self, request):
+    def create(self, request): #TODO: review the id before saving
         """ POST: Create new objects in the Locations model
         Args:
             request (request): request recibed from the client.
