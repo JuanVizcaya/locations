@@ -19,6 +19,11 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 [3.-](#id3) __Frontend__
   - [Url](#id31)
 
+[4.-](#id4) __Containers__
+  - [postgis_db](#id41)
+  - [django_locs](#id42)
+  - [react_app](#id42)
+
 
 <div id='id1' />
 
@@ -77,6 +82,7 @@ You can access to the administration panel with the __Superuser__ credentials th
 
 #### Locations Endpoint
 You can make requests to the __Locations API__, even with your browser.
+
 `URL: http://localhost:5001/api/locations/`
 
 <div id='id23' />
@@ -171,3 +177,32 @@ You can make requests to the __Locations API__, even with your browser.
 `http://localhost:3000/`
 
 [Back to index](#id0)
+
+***
+
+<div id='id4' />
+
+## Containers
+
+<div id='id41' />
+
+#### postgis_db
+- Name: `postgis_db`
+
+- Port: `5432`
+
+<div id='id41' />
+
+#### django_locs
+- Name: `django_locs`
+
+- Port: `5001`
+
+- Depends on: `postgis_db`
+
+#### react_app
+- Name: `react_app`
+
+- Port: `3000`
+
+- Depends on: `django_locs`
