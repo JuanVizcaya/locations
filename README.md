@@ -47,9 +47,17 @@ This is a full project which has react in the *frontend*, *django/django_restfra
 
 `cd locations`
 
-- Build the containers:
+- Build the containers (Wait for django_locs):
 
 `docker-compose up --build`
+
+```
+django_locs    | Run 'python manage.py migrate' to apply them.
+django_locs    | February 15, 2021 - 07:46:59
+django_locs    | Django version 3.1.6, using settings 'prj.settings'
+django_locs    | Starting development server at http://0:5001/
+django_locs    | Quit the server with CONTROL-C.
+```
 
 - Make the needed django migrations:
 
