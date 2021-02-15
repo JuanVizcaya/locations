@@ -137,32 +137,6 @@ You can make requests to the __Locations API__, even with your browser.
 ]
 ```
 
-***
-
-`POST: http://localhost:5001/api/locations/`
-
-`body: JSON`
-```
-{
-    "tipo": "Sucursal",
-    "latitude": "19.420449",
-    "longitude": "-99.172991",
-    "color": "11A579"
-}
-```
-
-*Response:*
-```
-{
-    "id": 501,
-    "geometry": "SRID=4326;POINT (-99.172991 19.420449)",
-    "tipo": "Sucursal",
-    "latitude": "19.420449",
-    "longitude": "-99.172991",
-    "color": "11A579"
-}
-```
-
 [Back to index](#id0)
 
 
